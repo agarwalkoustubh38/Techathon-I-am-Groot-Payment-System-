@@ -4,7 +4,6 @@ import axios from 'axios'
 import './index.css'
 import meru_logo from '../../assets/images/meru_logo.png'
 import login_background from '../../assets/images/login_background.png'
-
 import { Link, useNavigate } from 'react-router-dom'
 // import { LOCAL_SERVER_URL } from '../../../config.js'
 
@@ -31,6 +30,7 @@ const Login = ({ loginUser }) => {
     //         navigate('/signup', { replace: true })
     //       }
     //     })
+    navigate('/dashboard')
     console.log(user)
   }
   const [showloginButton, setShowloginButton] = useState(true)
@@ -53,53 +53,52 @@ const Login = ({ loginUser }) => {
         scope: 'username'
       })
     }
-
     gapi.load('client:auth2', start)
   }, [showloginButton])
 
   return (
-      <div className='loginContainer'>
-        <div className='loginDesign'>
-          <img className='loginDesignImage' src={login_background}></img>
+    <div className='LoginContainer'>
+      <div className='LoginDesign'>
+        <img className='LoginDesignImage' src={login_background}></img>
+      </div>
+      <div className='LoginContent'>
+        <div>
+          <span className='TagOuter'>Pragati</span>
         </div>
-        <div className='loginContent'>
-          <div>
-            <span className='tagOuter'>Pragati</span>
-          </div>
-          <div >
-            <form method='post' className='loginForm'>
-              <div className = 'loginInputBox'>
-                <input
-                  type='username'
-                  name='username'
-                  value={user.username}
-                  className='loginInput'
-                  placeholder='User Name'
-                  onChange={handleChange}
-                />
-                <input
-                  type='password'
-                  name='password'
-                  className='loginInput'
-                  value={user.password}
-                  placeholder='Password'
-                  onChange={handleChange}
-                />
-              </div>
+        <div>
+          <form method='post' className='LoginForm'>
+            <div className='LoginInputBox'>
               <input
-                type='button'
-                className='loginButton'
-                onClick={loginDataSend}
-                value='Log in'
-                name='login'
-              ></input>
-            </form>
-          </div>
-        </div>
-        <div className='loginLogo'>
-          <img className='loginLogoImage' src={meru_logo}></img>
+                type='username'
+                name='username'
+                value={user.username}
+                className='LoginInput'
+                placeholder='User Name'
+                onChange={handleChange}
+              />
+              <input
+                type='password'
+                name='password'
+                className='LoginInput'
+                value={user.password}
+                placeholder='Password'
+                onChange={handleChange}
+              />
+            </div>
+            <input
+              type='button'
+              className='LoginButton'
+              onClick={loginDataSend}
+              value='Log in'
+              name='login'
+            ></input>
+          </form>
         </div>
       </div>
+      <div className='LoginLogo'>
+        <img className='LoginLogoImage' src={meru_logo}></img>
+      </div>
+    </div>
   )
 }
 export default Login
