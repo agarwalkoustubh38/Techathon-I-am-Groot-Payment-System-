@@ -1,17 +1,9 @@
-import mysql from 'mysql'
+import connection from "./database/sql_connection.js";
+import express from "express";
+import authRoutes from "./routes/auth.js"
 
-const connection = await mysql.createConnection({
-  host: '10.11.0.92',
-  port: 3306,
-  user: 'mlluser',
-  password: 'M!!U$#&@',
-  database: 'payment_system'
-})
+const app = express();
 
-await connection.connect(error => {
-  if (error) {
-    console.error('Error connecting to MySQL database:', error)
-  } else {
-    console.log('Connected to MySQL database!')
-  }
-})
+//ROUTES
+app.use("/auth",authRoutes);
+
