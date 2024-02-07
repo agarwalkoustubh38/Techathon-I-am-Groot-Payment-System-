@@ -1,0 +1,13 @@
+.SideBarLabel {
+  margin-bottom: 5%;
+}
+.SideBarLabel:hover {
+  cursor: pointer;
+}
+.SideBarDesignImage {
+  margin-bottom: -4px;
+  padding: 0% 5%;
+  max-width: 10%;
+  height: 10%;
+  overflow: hidden;
+}
