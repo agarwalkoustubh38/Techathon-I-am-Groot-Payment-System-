@@ -3,8 +3,9 @@ import './index.css'
 import { Link, useNavigate } from 'react-router-dom'
 import Sidebar from '../../layouts/Sidebar'
 import down_arrow from '../../assets/images/down_arrow.png'
+import SideBarTreeMap from '../SideBarTreeMap'
 function SideBarTree ({ node }) {
-  const { label, child } = node
+  const { label, child, image } = node
   const [showChildren, setShowChildren] = useState(false)
 
   const handleClick = () => {
@@ -15,15 +16,20 @@ function SideBarTree ({ node }) {
   const navigate = useNavigate()
   return (
     <>
-      <div onClick={handleClick} style={{ marginBottom: '10px' }}>
+      <div onClick={handleClick} className='SideBarLabel'>
+        <span className='SideBarDesign'>
+          <img className='SideBarDesignImage' src={image}></img>
+        </span>
         <span>{label}</span>
-        {/* <span>
-          <img src={down_arrow} />
-        </span> */}
+        {child.length > 0 ? (
+          <span className='SideBarDesign'>
+            <img className='SideBarDesignImage' src={down_arrow} />
+          </span>
+        ) : (
+          <></>
+        )}
       </div>
-      <div style={{ paddingLeft: '10px', borderLeft: '1px solid black' }}>
-        {showChildren && <Sidebar SideBarTreeData={child} />}
-      </div>
+      <div>{showChildren && <SideBarTreeMap SideBarTreeData={child} />}</div>
     </>
   )
 }
