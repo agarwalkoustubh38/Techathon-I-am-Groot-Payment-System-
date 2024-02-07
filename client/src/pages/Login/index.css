@@ -1,15 +1,17 @@
-.loginContainer {
+.LoginContainer {
   background-color: #fffcef;
   display: flex;
   justify-content: space-between;
   height: 100%;
 }
-.loginForm {
+
+.LoginForm {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.loginContent {
+
+.LoginContent {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -17,22 +19,26 @@
   align-items: center;
 }
 
-.loginDesign {
+.LoginDesign {
   width: 30%;
 }
-.loginDesignImage {
+
+.LoginDesignImage {
   max-width: 100%;
   height: 99%;
   overflow: hidden;
 }
-.loginLogo {
+
+.LoginLogo {
   top: 0;
   width: 20%;
 }
-.loginLogoImage {
+
+.LoginLogoImage {
   width: 100%;
 }
-.loginInput {
+
+.LoginInput {
   font-size: 1.2rem;
   overflow: hidden;
   border-radius: 5%;
@@ -45,7 +51,7 @@
   width: 90%;
 }
 
-.loginButton {
+.LoginButton {
   margin-top: 10%;
   font-size: 1.5rem;
   background-color: #f8e8a7;
@@ -54,11 +60,12 @@
   border: none;
   cursor: pointer;
 }
-.loginButton:hover {
+
+.LoginButton:hover {
   background-color: #f5dc71;
 }
 
-.tagOuter {
+.TagOuter {
   font-size: 4rem;
   font-weight: bold;
   display: flex;
