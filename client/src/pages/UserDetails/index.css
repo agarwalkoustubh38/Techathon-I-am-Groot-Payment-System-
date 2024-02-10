@@ -12,22 +12,22 @@ p {
   width: 100%;
 }
 .PersonProfile {
-  font-size: 2em;
+  font-size: 1.5em;
   display: flex;
   margin-left: 10%;
   flex-direction: column;
-  padding: 5%;
-  width: 40%;
+  padding-top: 2%;
+  width: 50%;
   align-items: center;
 }
 .PersonProfileImage {
-  width: 25%;
+  width: 20%;
 }
 
 .MiddleComponent {
   background-color: rgba(255, 223, 88, 0.1);
   width: 100%;
-  padding: 2%;
+  padding: 5%;
 }
 
 .ProfileOption {
@@ -40,7 +40,7 @@ p {
   background-color: rgba(33, 27, 26, 0.14);
   width: 46%;
   font-size: 0.8em;
-  padding: 4% 2%;
+  padding: 2% 2%;
   border-radius: 5%;
   border: none;
 }
@@ -54,4 +54,5 @@ p {
   width: 12%;
   height: 100%;
   cursor: pointer;
+  padding: 0;
 }
