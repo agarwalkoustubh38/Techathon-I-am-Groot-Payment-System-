@@ -1,0 +1,57 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+p {
+  text-align: center;
+}
+.MainDiv {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.PersonProfile {
+  font-size: 2em;
+  display: flex;
+  margin-left: 10%;
+  flex-direction: column;
+  padding: 5%;
+  width: 40%;
+  align-items: center;
+}
+.PersonProfileImage {
+  width: 25%;
+}
+
+.MiddleComponent {
+  background-color: rgba(255, 223, 88, 0.1);
+  width: 100%;
+  padding: 2%;
+}
+
+.ProfileOption {
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+}
+
+.DesignBtn {
+  background-color: rgba(33, 27, 26, 0.14);
+  width: 46%;
+  font-size: 0.8em;
+  padding: 4% 2%;
+  border-radius: 5%;
+  border: none;
+}
+
+.LabelClass {
+  display: flex;
+  align-items: center;
+}
+
+.EditSign {
+  width: 12%;
+  height: 100%;
+  cursor: pointer;
+}
